@@ -1,7 +1,7 @@
-body {
-  background-image: url("construction\ background.png");
-  background-size:100% 100%;
-}
+/* body { */
+  /* background-image: url("construction\ background.png"); */
+  /* background-size:100% 100%; */
+/* }
 body, html {
   margin: 0;
   padding: 0;
@@ -29,4 +29,79 @@ body, html {
   
   margin-left: 30%;
   margin-right: 30%;
+} */
+
+.work-experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.project-card-container {
+  display: flex;
+  border: 8px solid pink; /* Border, probably delete later */
+  min-height: 1600px;
+  gap: 20px;
+  /* justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  flex-wrap: wrap; */
+}
+
+.project-card {
+  background-color: #1e293b;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  width: 450px;
+  height: 450px;
+
+  display: flex;
+  flex-shrink: 0;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card-header {
+  display: flex;
+  /* flex-direction: center; */
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+/* .project-card-header:hover {
+  transform: scale(1);
+} */
+
+.project-card-header h3 {
+  font-size: 1.25rem;
+  /* line-height: 1.75rem; */
+  font-weight: 600;
+  /* letter-spacing: -0.05em; */
+  color: #38bdf8;
+  /* margin-bottom: 0.5rem; */
+  height: fit-content;
+  box-shadow: none;
+  /* margin: 20px; */
+}
+
+.project-card-header:hover h3 {
+  transform: scale(1);
+}
+
+.project-card-header img {
+  flex-shrink: 0;
+}
+
+.project-card p {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+
+
