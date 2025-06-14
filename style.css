@@ -30,6 +30,7 @@ body, html {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: #0a192f;
 }
 
 .work-experience-container {
@@ -40,59 +41,98 @@ body, html {
 
 .project-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  border: 8px solid pink; /* Border, probably delete later */
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  /* border: 8px solid white ; Border, probably delete later */
+  gap: 5rem;
   padding: 2rem;
-  width: 70%;
-  place-items: center;
-  
+  justify-items: center;  
+}
+
+@media (min-width: 640px) {
+  .project-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 60%;
+  }
+
+}
+
+@media (min-width: 640px) and (max-width: 1000px) {
+    .project-card-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
   background-color: #1e293b;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 1.5rem 1rem 2rem;
   box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
   overflow: hidden;
 
   width: 100%;
-  aspect-ratio: 1.5 / 1.3;
-  transition: transform 0.3s ease-in-out;
+  aspect-ratio: 1 / 1;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
+  transform: translateY(-4px);
+  box-shadow: 0 16px 24px -4px rgba(0,0,0,.35),
+              0 6px 10px -2px rgba(0,0,0,.25);
 }
 
 .project-card-header {
   display: flex;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
-  height: 100px;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-card-header img {
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: contain;
 }
 
 .project-card-header h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0;
   color: #38bdf8;
-  height: fit-content;
-  box-shadow: none;
+  aspect-ratio: 200;
+  /* padding: ; */
 }
 
 .project-card-header:hover h3 {
   transform: scale(1);
+  box-shadow: none;
+  
 }
 
-.project-card-header img {
-  flex-shrink: 0;
+.project-card-badges {
+  background-color: #233044;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+
+.project-card-badges img {
+  height: 1.5rem;
 }
 
 .project-card p {
-  color: #94a3b8;
-  font-size: 0.875rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.4;
   margin-bottom: 1rem;
-  padding: 8%;
+  /* text-align: center; */
+  /* padding: 8%; */
 }
 
 
