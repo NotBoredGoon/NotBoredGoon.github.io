@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1.25rem;
+  justify-content: center;
+}
+
+.wrapper {
+  max-width: 42rem;
+  background-color: #1e293b;  
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 100%;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 24px -4px rgba(0,0,0,.35),
+              0 6px 10px -2px rgba(0,0,0,.25);
+}
+
+.wrapper h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: #38bdf8;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.company img{
+  width: 32px;
+  height: 32px;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: white;
+}
+
+.company h5{
+  font-size: 1rem;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.date {
+  font-size: 0.875rem;
+  letter-spacing: -0.015em;
+  margin: 0.25rem 0 0;
+  color: #c2cddb;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 0.5rem 0 0.75rem;
+}
+
+.badge {
+  height: 1.25rem;
+}
+
+.description {
+  display: block;
+  height: 100%;
+  border-radius: 0.5rem;
+  padding-left: 0; 
+}
+
+.description ul {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  /* font-weight: 500; */
+  color: #cbd5e1;
+  gap: 0.5rem;
+  margin: 0;
+  list-style-position: inside;
+}
+
+@media (min-width: 768px) {
+  .wrapper h3 {
+    font-size: 2rem;
+  }
+  .company h5 {
+    font-size: 1.125rem;
+  }
+  .date {
+    font-size: 1rem;
+  }
+  .badge {
+    height: 1.5rem;
+  }
+  .description ul {
+    font-size: 0.875rem;
+  }
+  .description {
+    padding-left: 1.25rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .description {
+    color: #f3f4f6;
+  }
+}
